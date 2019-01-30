@@ -137,7 +137,7 @@ static struct initialization offsets[] = {
 
   // Organized by device.
   
-  // iPhone Offsets                                               // Format: {device} - {model number}
+        // iPhone Offsets                                               // Format: {device} - {model number}
 	{ "iPhone11,*", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone 7 and 7 Plus - global offset
 	{ "iPhone10,3", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone X - A1865/A1902
 	{ "iPhone10,6", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone X - A1901
@@ -145,13 +145,13 @@ static struct initialization offsets[] = {
 	{ "iPhone10,4", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 - A1905
 	{ "iPhone10,2", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 Plus - A1864/A1898/A1899
 	{ "iPhone10,5", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 Plus - A1897
-  { "iPhone9,*", "16A366-16C104", offsets__iphone10_1__16B92  },  // iPhone 7 and 7 Plus - global offset
+        { "iPhone9,*", "16A366-16C104", offsets__iphone10_1__16B92  },  // iPhone 7 and 7 Plus - global offset
   
-  // iPad Offsets                                                 // Format: {device} - {model number}
-  {"iPad7,5", "16C50-16C104", offsets__iphone10_1__16B92 },
+        // iPad Offsets                                                 // Format: {device} - {model number}
+        {"iPad7,5", "16C50-16C104", offsets__iphone10_1__16B92 },
 
-    //Aperently A9 will get tfp0 but wont be able to creat IOAudio2DeviceUserCilent (maybe?) so we will leave the offsets as is for noe
-   { "iPhone8,*", "16A366-16C104", offsets__iphone10_1__16B92  },
+        // Apparently A9 will get tfp0 but wont be able to create IOAudio2DeviceUserClient (maybe?) so we will leave the offsets as is for noe
+        { "iPhone8,*", "16A366-16C104", offsets__iphone10_1__16B92  },
     
 	{ "*",          "*",            initialize_computed_offsets },
 };
