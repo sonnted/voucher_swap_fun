@@ -12,6 +12,7 @@
 #import "log.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *consoleView;
 
 @end
 
@@ -32,7 +33,7 @@
             _run.enabled = false;
             [_run setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
             [sender setTitle:@"doing it..." forState:UIControlStateNormal];
-            printf("Running Exploit...\n");
+            _consoleView.text = @"Logs:\nRunning Exploit\n(console logs still wip lol)";
             double delayInSeconds = 5.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -64,6 +65,10 @@
                   0x4545454545454545,
                   0x4646464646464646);
     kernel_call_deinit();
+}
+
+- (void)log:(NSString *)text {
+    self.consoleView.text = [NSString stringWithFormat:@"%@%@ \n", self.consoleView.text, text];
 }
 
 @end

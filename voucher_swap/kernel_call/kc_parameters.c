@@ -4,7 +4,6 @@
  */
 #define KERNEL_CALL_PARAMETERS_EXTERN
 #include "kernel_call/kc_parameters.h"
-
 #include "kernel_slide.h"
 #include "log.h"
 #include "platform.h"
@@ -13,6 +12,9 @@
 // ---- Initialization routines -------------------------------------------------------------------
 
 // A struct describing an initialization.
+
+
+
 struct initialization {
 	const char *devices;
 	const char *builds;
@@ -182,6 +184,10 @@ kernel_call_parameters_init() {
 	size_t count = run_initializations(offsets, ARRAY_COUNT(offsets));
 	if (count < 1) {
 		ERROR("no kernel_call %s for %s %s", "offsets",
+              
+              
+              
+              
 				platform.machine, platform.osversion);
 		return false;
 	}
