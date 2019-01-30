@@ -406,7 +406,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notdan-voucher-swap-fun";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notdan.voucher-swap-fun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/voucher_swap";
@@ -428,7 +428,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notdan-voucher-swap-fun";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notdan.voucher-swap-fun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/voucher_swap";
