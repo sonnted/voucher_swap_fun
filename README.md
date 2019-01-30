@@ -4,8 +4,10 @@ Fork if you're interested in helping :)
 
 ### Currently supported devices:
 - iPhone 8 (iPhone 10,1)
+- iPhone 8 Plus (iPhone 10,6)
 - iPhone XS (iPhone 11,2)
 - iPhone XR (iPhone 11,8)
+- iPad 5th Gen (iPad 7,5)
 
 
 ### Todo:
