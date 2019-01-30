@@ -6,7 +6,7 @@ Fork if you're interested in helping :)
 - iPhone 8 (iPhone 10,1)
 - iPhone XS (iPhone 11,2)
 - iPhone XR (iPhone 11,8)
-<br>
+&nbsp;<br>
 - Todo:
 - Add root
 - Support for more devices
