@@ -126,27 +126,31 @@ initialize_computed_offsets() {
 	COUNT_PER_BLOCK(ipc_port) = BLOCK_SIZE(ipc_port) / SIZE(ipc_port);
 	COUNT_PER_BLOCK(ipc_voucher) = BLOCK_SIZE(ipc_voucher) / SIZE(ipc_voucher);
 }
+
 // iPhone10,1 should work on all devices pre X
-// iPhone11,8 should work on all devices after X
+// iPhone11,8 should work on all devices After X
 // offsets should work on all versions (12.0-12.1.2)
 
 // A list of offset initializations by platform.
 static struct initialization offsets[] = {
 
-	{ "iPhone11,*", "16A366-16C104", offsets__iphone11_8__16C50  },
-	{ "iPhone10,3", "16A366-16C104", offsets__iphone11_8__16C50  },
-	{ "iPhone10,6", "16A366-16C104", offsets__iphone11_8__16C50  },
-	{ "iPhone10,1", "16A9366-16C104", offsets__iphone10_1__16B92  },
-	{ "iPhone10,4", "16A9366-16C104", offsets__iphone10_1__16B92  },
-	{ "iPhone10,2", "16A9366-16C104", offsets__iphone10_1__16B92  },
-	{ "iPhone10,5", "16A9366-16C104", offsets__iphone10_1__16B92  },
-        { "iPhone9,*", "16A366-16C104", offsets__iphone10_1__16B92  },
-    
-        {"iPad7,5", "16C50-16C104", offsets__iphone10_1__16B92 },
-	
-	
-       // Apparently A9 can get tfp0 but won't be able to create IOAudio2DeviceUserClient (maybe?), so we will leave the offsets as is for now
-       { "iPhone8,*", "16A366-16C104", offsets__iphone10_1__16B92  },
+  // Organized by device.
+  
+  // iPhone Offsets                                               // Format: {device} - {model number}
+	{ "iPhone11,*", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone 7 and 7 Plus - global offset
+	{ "iPhone10,3", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone X - A1865/A1902
+	{ "iPhone10,6", "16A366-16C104", offsets__iphone11_8__16C50  }, // iPhone X - A1901
+	{ "iPhone10,1", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 - A1863/A1906/A1907
+	{ "iPhone10,4", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 - A1905
+	{ "iPhone10,2", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 Plus - A1864/A1898/A1899
+	{ "iPhone10,5", "16A9366-16C104", offsets__iphone10_1__16B92 }, // iPhone 8 Plus - A1897
+  { "iPhone9,*", "16A366-16C104", offsets__iphone10_1__16B92  },  // iPhone 7 and 7 Plus - global offset
+  
+  // iPad Offsets                                                 // Format: {device} - {model number}
+  {"iPad7,5", "16C50-16C104", offsets__iphone10_1__16B92 },
+
+    //Aperently A9 will get tfp0 but wont be able to creat IOAudio2DeviceUserCilent (maybe?) so we will leave the offsets as is for noe
+   { "iPhone8,*", "16A366-16C104", offsets__iphone10_1__16B92  },
     
 	{ "*",          "*",            initialize_computed_offsets },
 };
