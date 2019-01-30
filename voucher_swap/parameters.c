@@ -2,6 +2,7 @@
  * parameters.c
  * Brandon Azad
  */
+
 #define PARAMETERS_EXTERN
 #include "parameters.h"
 
