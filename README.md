@@ -13,3 +13,6 @@ Fork if you're interested in helping :)
 ### Todo:
 - Add root
 - Support for more devices
+
+### Offsets
+Offsets are found at https://github.com/jacc/voucher_swap_offsets.
